@@ -1,0 +1,15 @@
+name: github actions
+on : push
+jobs:
+  demo:
+    name: Github actions demo
+    runs-on : ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: check the file
+        run: ls -lrt
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+        -run: java -cp java HelloWorldApp
