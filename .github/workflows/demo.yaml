@@ -12,4 +12,5 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - run: java -cp java HelloWorldApp
+      - name: check java version
+        run : java --version
